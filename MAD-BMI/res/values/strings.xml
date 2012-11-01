@@ -4,5 +4,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_start_screen">StartScreen</string>
+    <string name="secondHello">Hello Again</string>
+    <string name="buttonAdd">Add One</string>
+    <string name="buttonSubtract">Subtract One</string>
 
 </resources>
