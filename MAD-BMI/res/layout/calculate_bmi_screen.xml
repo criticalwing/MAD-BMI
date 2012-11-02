@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/main_background">
+    
+    <TextView
+        android:id="@+id/titleDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="25dp"
+        android:text="@string/main_title"
+        android:textSize="45dp" />
+
+    <EditText
+        android:id="@+id/heightEnter"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:hint="@string/eHeight" />
+
+    <EditText
+        android:id="@+id/weightEnter"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:hint="@string/eWeight" />
+
+    <Button
+        android:id="@+id/bSubmit"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="@string/submitButton"
+        android:textSize="20dp" />
+
+    <ToggleButton
+        android:id="@+id/metricOrImperial"
+        android:textOff="@string/units"
+        android:textOn="@string/units"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:text="@string/units" />
+
+</LinearLayout>

@@ -18,8 +18,8 @@ public class Splash extends Activity {
 				}catch(InterruptedException iE){
 					iE.printStackTrace();
 				}finally{
-					Intent openStartPoint = new Intent("ie.cit.patrickrobertson.STARTSCREEN");
-					startActivity(openStartPoint);
+					Intent calculateBMI = new Intent("ie.cit.patrickrobertson.CALCULATEBMI");
+					startActivity(calculateBMI);
 				}
 			}
 		};
