@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:gravity="left"
         android:paddingTop="25dp"
         android:text="@string/main_title"
         android:textSize="45dp" />
@@ -26,8 +26,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:gravity="center"
-            android:hint="@string/mHeight" />
+            android:gravity="left"
+            android:hint="@string/mHeight"
+            android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/weightEnter"
@@ -35,8 +36,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:hint="@string/mWeight" />
+            android:gravity="left"
+            android:hint="@string/mWeight"
+            android:inputType="numberDecimal" />
     </LinearLayout>
 
     <LinearLayout
@@ -59,8 +61,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:hint="@string/iFeetHeight" />
+                android:gravity="left"
+                android:hint="@string/iFeetHeight"
+                android:inputType="numberDecimal" />
 
             <EditText
                 android:id="@+id/heightInchesEnter"
@@ -68,8 +71,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="15dp"
-                android:gravity="center"
+                android:gravity="left"
                 android:hint="@string/iInchesHeight"
+                android:inputType="numberDecimal"
                 android:paddingLeft="25dp" />
         </LinearLayout>
 
@@ -80,7 +84,9 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:hint="@string/iWeight" />
+            android:hint="@string/iWeight"
+            android:inputType="numberDecimal" />
+        
     </LinearLayout>
 
     <Button
@@ -98,9 +104,9 @@
         android:layout_height="75dp"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
+        android:checked="true"
         android:text="@string/units"
         android:textOff="@string/units"
-        android:textOn="@string/units"
-        android:checked="true" />
+        android:textOn="@string/units" />
 
 </LinearLayout>

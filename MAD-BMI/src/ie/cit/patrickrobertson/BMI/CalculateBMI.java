@@ -3,6 +3,8 @@ package ie.cit.patrickrobertson.BMI;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.text.Layout;
 import android.view.Menu;
@@ -51,15 +53,12 @@ public class CalculateBMI extends Activity {
 			
 			public void onClick(View v) {
 				click.start();
-				if(getHeightText.getText()==null||getHeightText.getText()==null){
-					if(entryType.isChecked()){
-						getHeightText.setHint("You must enter a value in cm");
-						getWeightText.setHint("You must enter a value in kg");
-					}else{
-						getHeightText.setHint("Must be Feet'Inches\"");
-						getWeightText.setHint("Enter Weight - stone lb");
-					}
-					
+				if(!validateInput()){
+						if(entryType.isChecked()){
+							alertButton("Your must enter Height in cm and weight in kgs");
+						}else{
+							alertButton("Your must enter Height in Feet & inches and weight in lbs");
+						}
 				}else{
 					try {
 						Class ourClass = Class.forName("ie.cit.patrickrobertson.Result");
@@ -95,18 +94,37 @@ public class CalculateBMI extends Activity {
 		super.onPause();
 	}
 
-	public boolean validateInput(String input){
-
+	public boolean validateInput(){
 		
-		return true;
+		if(entryType.isChecked()){
+			if(getHeightText.getText()==null||getWeightText.getText()==null){
+				return false;
+			}
+		}else{
+			if(getHeightFeet.getText()==null||getImpWeightText.getText()==null||getHeightInches.getText()==null){
+				return false;
+			}
+		}
+		return false;
 	}
 	
-	
-	
-	
+	public void alertButton(String message){
+		
+		new AlertDialog.Builder(this)
+	    .setTitle("Error")
+	    .setMessage(message)
+	    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+	        public void onClick(DialogInterface dialog, int which) { 
+	        	dialog.dismiss();
+	        }
+	     })
+	     .show();
+		
+		
+	}
 	
 	@Override
-	protected void onSaveInstanceState(Bundle outState) {
+ 	protected void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 		// save stuff
 		outState.putCharSequence("height", getHeightText.getText().toString());
