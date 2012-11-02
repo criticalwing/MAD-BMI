@@ -11,7 +11,11 @@
     <string name="units">Change Units:</string>
     <string name="metric">metric[cm/Kg]</string>
     <string name="imperial">imperial[feet/lb]</string>
-
-    
+    <string name="save_button">Save the Result</string>
+    <string name="result_title">Result</string>
+    <string name="result_date">01\-11\-2012</string>
+    <string name="result_figure">25</string>
+    <string name="result_date_title">date</string>
+    <string name="result_figure_title">figure</string>
 
 </resources>

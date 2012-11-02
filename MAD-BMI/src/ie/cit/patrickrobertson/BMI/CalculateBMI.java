@@ -3,6 +3,7 @@ package ie.cit.patrickrobertson.BMI;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -39,6 +40,13 @@ public class CalculateBMI extends Activity {
 			public void onClick(View v) {
 				click.start();
 				getHeightText.setText("done something");
+				try {
+					Class ourClass = Class.forName("ie.cit.patrickrobertson.Result");
+					Intent ourIntent = new Intent(CalculateBMI.this, ourClass);
+					startActivity(ourIntent);
+				} catch (ClassNotFoundException cNFE) {
+					cNFE.printStackTrace();
+				}
 			}
 		});
         
@@ -58,6 +66,12 @@ public class CalculateBMI extends Activity {
 			}
 		});
     }
+
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+	}
 
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
