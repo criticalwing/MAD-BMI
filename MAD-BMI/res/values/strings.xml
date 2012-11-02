@@ -6,8 +6,11 @@
     <string name="title_activity_start_screen">StartScreen</string>
     <string name="secondHello">Hello Again</string>
     <string name="submitButton">Submit</string>
-    <string name="eHeight">Enter Height - Feet\'Inches\"</string>
-    <string name="eWeight">Enter Weight - stone lb</string>
+    <string name="mHeight">Height - cm</string>
+    <string name="mWeight">Weight - kg</string>
+    <string name="iFeetHeight">Feet</string>
+    <string name="iInchesHeight">Inches</string>
+    <string name="iWeight">Weight - lb</string>
     <string name="units">Change Units:</string>
     <string name="metric">metric[cm/Kg]</string>
     <string name="imperial">imperial[feet/lb]</string>

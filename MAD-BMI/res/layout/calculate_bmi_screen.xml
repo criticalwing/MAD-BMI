@@ -1,9 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" 
-    android:background="@drawable/main_background">
-    
+    android:background="@drawable/main_background"
+    android:orientation="vertical" >
+
     <TextView
         android:id="@+id/titleDisplay"
         android:layout_width="wrap_content"
@@ -12,26 +12,76 @@
         android:gravity="center"
         android:paddingTop="25dp"
         android:text="@string/main_title"
-        android:textSize="45dp" 
-        android:textColor="#000000"/>
+        android:textSize="45dp" />
 
-    <EditText
-        android:id="@+id/heightEnter"
-        android:layout_width="250dp"
+    <LinearLayout
+        android:id="@+id/metricEnter"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:hint="@string/eHeight" />
+        android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/weightEnter"
-        android:layout_width="250dp"
+        <EditText
+            android:id="@+id/heightEnter"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:hint="@string/mHeight" />
+
+        <EditText
+            android:id="@+id/weightEnter"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:hint="@string/mWeight" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/imperialEnter"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="3dp"
         android:gravity="center"
-        android:hint="@string/eWeight" />
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/heightFeetEnter"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:hint="@string/iFeetHeight" />
+
+            <EditText
+                android:id="@+id/heightInchesEnter"
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:hint="@string/iInchesHeight"
+                android:paddingLeft="25dp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/weightImpEnter"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:hint="@string/iWeight" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/bSubmit"
@@ -44,12 +94,13 @@
 
     <ToggleButton
         android:id="@+id/metricOrImperial"
-        android:textOff="@string/units"
-        android:textOn="@string/units"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="75dp"
-        android:text="@string/units" />
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="@string/units"
+        android:textOff="@string/units"
+        android:textOn="@string/units"
+        android:checked="true" />
 
 </LinearLayout>

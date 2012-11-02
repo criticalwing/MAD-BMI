@@ -22,20 +22,25 @@ public final class R {
         public static final int red_result=0x7f020008;
     }
     public static final class id {
-        public static final int bSave=0x7f08000c;
-        public static final int bSubmit=0x7f080003;
-        public static final int heightEnter=0x7f080001;
-        public static final int menu_settings=0x7f08000d;
-        public static final int metricOrImperial=0x7f080004;
-        public static final int resultDate=0x7f08000a;
-        public static final int resultDateTitle=0x7f080007;
-        public static final int resultFigure=0x7f08000b;
-        public static final int resultFigureTitle=0x7f080008;
-        public static final int result_result=0x7f080009;
-        public static final int result_titles=0x7f080006;
+        public static final int bSave=0x7f080011;
+        public static final int bSubmit=0x7f080008;
+        public static final int heightEnter=0x7f080002;
+        public static final int heightFeetEnter=0x7f080005;
+        public static final int heightInchesEnter=0x7f080006;
+        public static final int imperialEnter=0x7f080004;
+        public static final int menu_settings=0x7f080012;
+        public static final int metricEnter=0x7f080001;
+        public static final int metricOrImperial=0x7f080009;
+        public static final int resultDate=0x7f08000f;
+        public static final int resultDateTitle=0x7f08000c;
+        public static final int resultFigure=0x7f080010;
+        public static final int resultFigureTitle=0x7f08000d;
+        public static final int result_result=0x7f08000e;
+        public static final int result_titles=0x7f08000b;
         public static final int titleDisplay=0x7f080000;
-        public static final int titleResult=0x7f080005;
-        public static final int weightEnter=0x7f080002;
+        public static final int titleResult=0x7f08000a;
+        public static final int weightEnter=0x7f080003;
+        public static final int weightImpEnter=0x7f080007;
     }
     public static final class layout {
         public static final int calculate_bmi_screen=0x7f030000;
@@ -51,22 +56,25 @@ public final class R {
     }
     public static final class string {
         public static final int app_name=0x7f050000;
-        public static final int eHeight=0x7f050006;
-        public static final int eWeight=0x7f050007;
-        public static final int imperial=0x7f05000a;
+        public static final int iFeetHeight=0x7f050008;
+        public static final int iInchesHeight=0x7f050009;
+        public static final int iWeight=0x7f05000a;
+        public static final int imperial=0x7f05000d;
+        public static final int mHeight=0x7f050006;
+        public static final int mWeight=0x7f050007;
         public static final int main_title=0x7f050001;
         public static final int menu_settings=0x7f050002;
-        public static final int metric=0x7f050009;
-        public static final int result_date=0x7f05000d;
-        public static final int result_date_title=0x7f05000f;
-        public static final int result_figure=0x7f05000e;
-        public static final int result_figure_title=0x7f050010;
-        public static final int result_title=0x7f05000c;
-        public static final int save_button=0x7f05000b;
+        public static final int metric=0x7f05000c;
+        public static final int result_date=0x7f050010;
+        public static final int result_date_title=0x7f050012;
+        public static final int result_figure=0x7f050011;
+        public static final int result_figure_title=0x7f050013;
+        public static final int result_title=0x7f05000f;
+        public static final int save_button=0x7f05000e;
         public static final int secondHello=0x7f050004;
         public static final int submitButton=0x7f050005;
         public static final int title_activity_start_screen=0x7f050003;
-        public static final int units=0x7f050008;
+        public static final int units=0x7f05000b;
     }
     public static final class style {
         public static final int AppTheme=0x7f060000;
