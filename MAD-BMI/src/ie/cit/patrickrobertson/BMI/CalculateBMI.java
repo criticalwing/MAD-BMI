@@ -29,6 +29,8 @@ public class CalculateBMI extends Activity {
 	LinearLayout metricEnter;
 	MediaPlayer click;
 	MediaPlayer slide;
+	double height;
+	double weight;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,14 +54,18 @@ public class CalculateBMI extends Activity {
         	
 			
 			public void onClick(View v) {
+				//play sound effect
 				click.start();
+				//check if teh entry is valid
 				if(!validateInput()){
 						if(entryType.isChecked()){
 							alertButton("Your must enter Height in cm and weight in kgs");
 						}else{
 							alertButton("Your must enter Height in Feet & inches and weight in lbs");
 						}
+				//if entry is valid set values and launch result activity
 				}else{
+					setHeightAndWeight();					
 					try {
 						Class ourClass = Class.forName("ie.cit.patrickrobertson.Result");
 						Intent ourIntent = new Intent(CalculateBMI.this, ourClass);
@@ -69,6 +75,7 @@ public class CalculateBMI extends Activity {
 					}
 				}
 			}
+
 		});
         
         entryType.setOnClickListener(new View.OnClickListener() {
@@ -108,6 +115,22 @@ public class CalculateBMI extends Activity {
 		return false;
 	}
 	
+
+	private void setHeightAndWeight() {
+		//if metric assign values
+		if(entryType.isChecked()){
+			height = Integer.valueOf(getHeightText.getText().toString());
+			weight = Integer.valueOf(getWeightText.getText().toString());
+		//if imperial convert to metric and assign
+		}else{
+			height = (Integer.valueOf(getHeightFeet.getText().toString())+(Integer.valueOf(
+						getHeightInches.getText().toString())/12))*30.48;
+			weight = (Integer.valueOf(getImpWeightText.getText().toString())*0.453592);
+		}
+		
+	}
+	
+	
 	public void alertButton(String message){
 		
 		new AlertDialog.Builder(this)
@@ -127,9 +150,8 @@ public class CalculateBMI extends Activity {
  	protected void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
 		// save stuff
-		outState.putCharSequence("height", getHeightText.getText().toString());
-		outState.putCharSequence("weight", getWeightText.getText().toString());
-		outState.putBoolean("entryType", entryType.isChecked());
+		outState.putDouble("height", height);
+		outState.putDouble("weight", weight);
 		
 	}
     
