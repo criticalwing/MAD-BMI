@@ -24,25 +24,26 @@ public final class R {
     }
     public static final class id {
         public static final int bDelHistory=0x7f080012;
-        public static final int bEmail=0x7f08001f;
+        public static final int bEmail=0x7f080021;
         public static final int bGraph=0x7f080011;
         public static final int bGraphDelHistory=0x7f08000e;
         public static final int bGraphHome=0x7f08000c;
         public static final int bGraphtoList=0x7f08000d;
         public static final int bHome=0x7f08000b;
-        public static final int bNewEntry=0x7f080020;
+        public static final int bNewEntry=0x7f08001f;
         public static final int bResultHome=0x7f08001e;
         public static final int bReturn=0x7f080010;
         public static final int bSave=0x7f08001d;
-        public static final int bShowHistory=0x7f080021;
+        public static final int bShowHistory=0x7f080020;
         public static final int bSubmit=0x7f080009;
+        public static final int bWiki=0x7f080022;
         public static final int graphCanvas=0x7f08000f;
         public static final int heightEnter=0x7f080003;
         public static final int heightFeetEnter=0x7f080006;
         public static final int heightInchesEnter=0x7f080007;
         public static final int home_layout=0x7f080017;
         public static final int imperialEnter=0x7f080005;
-        public static final int menu_settings=0x7f080022;
+        public static final int menu_settings=0x7f080023;
         public static final int metricEnter=0x7f080002;
         public static final int metricOrImperial=0x7f08000a;
         public static final int resultDate=0x7f08001b;
@@ -61,11 +62,11 @@ public final class R {
     }
     public static final class layout {
         public static final int calculate_bmi_screen=0x7f030000;
-        public static final int graph=0x7f030001;
-        public static final int history_graph=0x7f030002;
-        public static final int land_calculate_bmi_screen=0x7f030003;
-        public static final int land_history_graph=0x7f030004;
-        public static final int land_result_history=0x7f030005;
+        public static final int history_graph=0x7f030001;
+        public static final int land_calculate_bmi_screen=0x7f030002;
+        public static final int land_history_graph=0x7f030003;
+        public static final int land_result_history=0x7f030004;
+        public static final int land_result_screen=0x7f030005;
         public static final int result_history=0x7f030006;
         public static final int result_screen=0x7f030007;
         public static final int splash_screen=0x7f030008;
@@ -110,6 +111,7 @@ public final class R {
         public static final int title_activity_start_screen=0x7f050003;
         public static final int units=0x7f05000b;
         public static final int welcome=0x7f050016;
+        public static final int wiki=0x7f05001f;
     }
     public static final class style {
         public static final int AppTheme=0x7f060000;

@@ -3,13 +3,14 @@ package ie.cit.patrickrobertson.BMI;
 import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class Welcome extends Activity{
 
-	Button history, enter, email;
+	Button history, enter, email, wiki;
 	MediaPlayer click;
 	ResultsManager rm;
 	
@@ -21,6 +22,7 @@ public class Welcome extends Activity{
 		history = (Button) findViewById(R.id.bShowHistory);
 		email = (Button) findViewById(R.id.bEmail);
 		enter = (Button) findViewById(R.id.bNewEntry);
+		wiki = (Button) findViewById(R.id.bWiki);
 		rm = new ResultsManager(this);
 		
 		history.setOnClickListener(new View.OnClickListener() {
@@ -50,19 +52,28 @@ public class Welcome extends Activity{
 					output = output.concat(x.toString()).concat("-BMI = ").concat(String.valueOf(x.getBMI()).concat("\n"));
 				}
 				
-				Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+				Intent intent = new Intent(Intent.ACTION_SEND);
 
 				String[] recipients = new String[]{"enterYourEmailAddress", "",};
 
-				emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, recipients);
+				
+				intent.setType("text/plain");
+				intent.putExtra(Intent.EXTRA_EMAIL, recipients);
+				intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
+				intent.putExtra(Intent.EXTRA_TEXT, output);
 
-				emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, R.string.app_name);
-
-				emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, output);
-
-				emailIntent.setType("text/plain");
-
-				startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+				startActivity(Intent.createChooser(intent, "Send Email"));
+				
+			}
+		});
+		
+		wiki.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				String url = "http://http://en.wikipedia.org/wiki/Body_mass_index";
+				Intent i = new Intent(Intent.ACTION_VIEW);
+				i.setData(Uri.parse(url));
+				startActivity(i);
 				
 			}
 		});

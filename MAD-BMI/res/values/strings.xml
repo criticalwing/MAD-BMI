@@ -31,5 +31,6 @@
     <string name="history_title"> - History</string>
     <string name="graph_title"> - Graph</string>
     <string name="email">Send History as Email</string>
+    <string name="wiki">Details of BMI - wiki</string>
 
 </resources>
