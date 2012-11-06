@@ -12,6 +12,7 @@
         android:gravity="left"
         android:paddingTop="25dp"
         android:text="@string/main_title"
+        android:textColor="#000000"
         android:textSize="45dp" />
 
     <LinearLayout
@@ -52,6 +53,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:gravity="center"
             android:orientation="horizontal" >
 
@@ -59,19 +61,14 @@
                 android:id="@+id/heightFeetEnter"
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:gravity="left"
                 android:hint="@string/iFeetHeight"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal" >
+            </EditText>
 
             <EditText
                 android:id="@+id/heightInchesEnter"
                 android:layout_width="125dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:gravity="left"
                 android:hint="@string/iInchesHeight"
                 android:inputType="numberDecimal"
                 android:paddingLeft="25dp" />
@@ -84,9 +81,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:hint="@string/iWeight"
+            android:hint="@string/impWeight"
             android:inputType="numberDecimal" />
-        
     </LinearLayout>
 
     <Button
@@ -108,5 +104,23 @@
         android:text="@string/units"
         android:textOff="@string/units"
         android:textOn="@string/units" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="bottom"
+            android:text="@string/back"
+            android:textSize="15dp" />
+    </LinearLayout>
 
 </LinearLayout>

@@ -18,21 +18,12 @@ public class Splash extends Activity {
 				}catch(InterruptedException iE){
 					iE.printStackTrace();
 				}finally{
-					Intent calculateBMI = new Intent("ie.cit.patrickrobertson.CALCULATEBMI");
-					startActivity(calculateBMI);
+					Intent welcome = new Intent("ie.cit.patrickrobertson.WELCOME");
+					startActivity(welcome);
 				}
 			}
 		};
 		timer.start();
 	}
-
-	@Override
-	protected void onPause() {
-		// TODO Auto-generated method stub
-		super.onPause();
-		finish();
-	}
-	
-	
 
 }

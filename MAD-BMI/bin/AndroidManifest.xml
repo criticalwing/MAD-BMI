@@ -22,6 +22,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Welcome"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="ie.cit.patrickrobertson.WELCOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".CalculateBMI"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
             <intent-filter>
@@ -31,10 +40,28 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Result"
+            android:name=".ResultScreen"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
             <intent-filter>
-                <action android:name="ie.cit.patrickrobertson.RESULT" />
+                <action android:name="ie.cit.patrickrobertson.RESULTSCREEN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ResultHistory"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="ie.cit.patrickrobertson.RESULTSHISTORYSCREEN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ResultGraph"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="ie.cit.patrickrobertson.RESULTSGRAPHSCREEN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

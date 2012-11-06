@@ -10,7 +10,7 @@ public class Person implements Parcelable{
 	int BMI;
 	boolean complete;
 
-	public Person(int height, int weight) {
+	public Person(double height, double weight) {
 		super();
 		this.height = height;
 		this.weight = weight;
