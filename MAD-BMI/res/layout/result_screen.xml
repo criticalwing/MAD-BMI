@@ -10,9 +10,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:paddingTop="25dp"
+        android:paddingTop="15dp"
         android:text="@string/main_title"
-        android:textSize="45dp" />
+        android:textColor="#000000"
+        android:textSize="15dp" />
 
     <TextView
         android:id="@+id/titleResult"
@@ -21,6 +22,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="@string/result_title"
+        android:textColor="#000000"
         android:textSize="45dp" />
 
     <TableLayout
@@ -93,5 +95,14 @@
         android:layout_marginTop="5dp"
         android:text="@string/save_button"
         android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/bResultHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="@string/back"
+        android:textSize="15dp" />
 
 </LinearLayout>

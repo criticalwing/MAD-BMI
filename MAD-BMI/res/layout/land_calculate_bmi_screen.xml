@@ -24,25 +24,27 @@
         android:text="@string/enter_title"
         android:textColor="#000000"
         android:textSize="45dp" />
-<LinearLayout
+
+    <LinearLayout
         android:id="@+id/metricEnter"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:gravity="center"
+        android:orientation="horizontal" >
 
         <EditText
             android:id="@+id/heightEnter"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:gravity="left"
             android:hint="@string/mHeight"
             android:inputType="numberDecimal" />
 
         <EditText
             android:id="@+id/weightEnter"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
@@ -55,19 +57,19 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:visibility="gone" >
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <EditText
                 android:id="@+id/heightFeetEnter"
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/iFeetHeight"
                 android:inputType="numberDecimal" >
@@ -75,7 +77,7 @@
 
             <EditText
                 android:id="@+id/heightInchesEnter"
-                android:layout_width="125dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/iInchesHeight"
                 android:inputType="numberDecimal"
@@ -84,7 +86,7 @@
 
         <EditText
             android:id="@+id/weightImpEnter"
-            android:layout_width="250dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
@@ -101,31 +103,32 @@
         android:text="@string/submitButton"
         android:textSize="20dp" />
 
-    <ToggleButton
-        android:id="@+id/metricOrImperial"
-        android:layout_width="wrap_content"
-        android:layout_height="75dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:checked="true"
-        android:text="@string/units"
-        android:textOff="@string/units"
-        android:textOn="@string/units" />
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="horizontal" >
 
         <Button
             android:id="@+id/bHome"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp"
             android:text="@string/back"
             android:textSize="15dp" />
+
+        <ToggleButton
+            android:id="@+id/metricOrImperial"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:checked="true"
+            android:text="@string/units"
+            android:textOff="@string/units"
+            android:textOn="@string/units" />
     </LinearLayout>
 
 </LinearLayout>

@@ -15,6 +15,7 @@
     <string name="metric">metric[cm/Kg]</string>
     <string name="imperial">imperial[feet/lb]</string>
     <string name="save_button">Save the Result</string>
+    <string name="enter_title">Enter Values</string>
     <string name="result_title">Result</string>
     <string name="result_date">ERROR</string>
     <string name="result_figure">/??</string>
@@ -22,11 +23,13 @@
     <string name="result_figure_title">figure</string>
     <string name="graph_button">Show Graph</string>
     <string name="welcome">Welcome to the BMI calculator, you can either add a new entry or check out your history</string>
-	<string name="newentry">Add New Entry</string>
-	<string name="showHistory">Show History</string>
-	<string name="back">Home</string>
-	<string name="deleteH_button">Delete History</string>
-	<string name="list_button">Show List</string>
-    
-    
+    <string name="newentry">Add New Entry</string>
+    <string name="showHistory">Show History</string>
+    <string name="back">Home</string>
+    <string name="deleteH_button">Delete History</string>
+    <string name="list_button">Show List</string>
+    <string name="history_title"> - History</string>
+    <string name="graph_title"> - Graph</string>
+    <string name="email">Send History as Email</string>
+
 </resources>

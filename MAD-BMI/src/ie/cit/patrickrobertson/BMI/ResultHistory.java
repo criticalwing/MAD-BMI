@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -104,7 +106,7 @@ public class ResultHistory extends Activity {
 	}
 
 	private void setupLayout() {
-		setContentView(R.layout.result_history);
+		setContentBasedOnLayout();
 		resultsTable = (TableLayout) findViewById(R.id.result_history_table);
 		showGraph = (Button) findViewById(R.id.bGraph);
 		deleteHistory = (Button) findViewById(R.id.bDelHistory);
@@ -154,6 +156,25 @@ public class ResultHistory extends Activity {
 
 				}).show();
 
+	}
+	
+	private void setContentBasedOnLayout()
+	{
+	    WindowManager winMan = (WindowManager)getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+	    
+	    if (winMan != null)
+	    {
+	        int orientation = winMan.getDefaultDisplay().getOrientation();
+	        
+	        if (orientation == 0) {
+	            // Portrait
+	            setContentView(R.layout.result_history);
+	        }
+	        else if (orientation == 1) {
+	            // Landscape
+	            setContentView(R.layout.land_result_history);
+	        }            
+	    }
 	}
 
 }

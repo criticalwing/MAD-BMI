@@ -28,8 +28,14 @@ public class ResultScreen extends Activity {
 		super.onCreate(savedInstanceState);
 		// assign the layout elements
 		setupLayout();
+		if (savedInstanceState != null) {
+			result = (Result)savedInstanceState.getSerializable("result");
+		} else {
+			Bundle bundle = getIntent().getExtras();
+			result = new Result(bundle.getDouble("height"),
+					bundle.getDouble("weight"));
+		}
 		setResultDisplay();
-
 	}
 
 	private void setSaveButton() {
@@ -37,21 +43,21 @@ public class ResultScreen extends Activity {
 		saveResult.setOnClickListener(new View.OnClickListener() {
 
 			public void onClick(View v) {
-				//play sound
+				// play sound
 				click.start();
-				//append current result to text file;
-				rm = new ResultsManager(getApplicationContext(),result.toString());
-				Intent history = new Intent("ie.cit.patrickrobertson.RESULTSHISTORYSCREEN");
+				// append current result to text file;
+				rm = new ResultsManager(getApplicationContext(), result
+						.toString());
+				Intent history = new Intent(
+						"ie.cit.patrickrobertson.RESULTSHISTORYSCREEN");
 				startActivity(history);
 			}
 		});
-		
+
 	}
 
 	private void setResultDisplay() {
-		Bundle bundle = getIntent().getExtras();
-		result = new Result(bundle.getDouble("height"),
-				bundle.getDouble("weight"));
+		
 		resultDate.setText(result.getDate());
 		resultFigure.setText(String.valueOf(result.getBMI()));
 		resultTable.setBackgroundResource(getDrawableImage(result
@@ -99,6 +105,14 @@ public class ResultScreen extends Activity {
 					}
 				}).show();
 
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		outState.putSerializable("result", result);
+		outState.putDouble("height", result.getHeight());
+		outState.putDouble("weight", result.getWeight());
 	}
 
 }

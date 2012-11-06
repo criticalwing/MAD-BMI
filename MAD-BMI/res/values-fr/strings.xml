@@ -1,0 +1,35 @@
+<resources>
+
+    <string name="app_name">Calculatrice indice de masse corporellee</string>
+    <string name="main_title">BMI Calculatrice</string>
+    <string name="menu_settings">réglages</string>
+    <string name="title_activity_start_screen">StartScreen</string>
+    <string name="secondHello">Hello Again</string>
+    <string name="submitButton">soumettre</string>
+    <string name="mHeight">hauteur - cm</string>
+    <string name="mWeight">poids - kg</string>
+    <string name="iFeetHeight">Pieds</string>
+    <string name="iInchesHeight">pouces</string>
+    <string name="impWeight">poids - lb</string>
+    <string name="units">changer les unités d\'</string>
+    <string name="metric">métrique[cm/Kg]</string>
+    <string name="imperial">impérial[feet/lb]</string>
+    <string name="save_button">Sauvegarder le résultat</string>
+    <string name="enter_title">Entrez les valeurs</string>
+    <string name="result_title">résulter</string>
+    <string name="result_date">ERREUR</string>
+    <string name="result_figure">/??</string>
+    <string name="result_date_title">date</string>
+    <string name="result_figure_title">nombre</string>
+    <string name="graph_button">afficher le graphique</string>
+    <string name="welcome">Bienvenue sur le calculateur d\'IMC, vous pouvez soit ajouter une nouvelle entrée ou consultez votre histoire</string>
+    <string name="newentry">Ajouter une entrée</string>
+    <string name="showHistory">Afficher l\'historique</string>
+    <string name="back">But</string>
+    <string name="deleteH_button">supprimer l\'historique</string>
+    <string name="list_button">Afficher la liste</string>
+    <string name="history_title"> - histoire</string>
+    <string name="graph_title"> - graphique</string>
+    <string name="email">Envoyer Envoyer par mail Histoire</string>
+
+</resources>

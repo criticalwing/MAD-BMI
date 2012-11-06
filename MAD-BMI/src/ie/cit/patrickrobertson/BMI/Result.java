@@ -1,10 +1,11 @@
 package ie.cit.patrickrobertson.BMI;
 
+import java.io.Serializable;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class Result {
+public class Result implements Serializable {
 
 	private double height;
 	private double weight;

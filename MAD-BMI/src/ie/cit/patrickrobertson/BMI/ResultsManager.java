@@ -1,12 +1,10 @@
 package ie.cit.patrickrobertson.BMI;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
@@ -22,7 +20,12 @@ public class ResultsManager {
 
 	ResultsManager(Context context) {
 		this.context = context;
+		if(convertFileToResults().isEmpty()){
+		results = new ArrayList<Result>();
+		results.add(mapLinetoResult("01/01/1900-00-00"));
+		}else{
 		results = convertFileToResults();
+		}
 	}
 
 	ResultsManager(Context context, String input) {

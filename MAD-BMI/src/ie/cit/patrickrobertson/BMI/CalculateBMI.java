@@ -4,11 +4,12 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.text.Layout;
 import android.view.Menu;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -35,7 +36,7 @@ public class CalculateBMI extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.calculate_bmi_screen);
+		setContentBasedOnLayout();
 		setup();
 		buttonSetup();
 	}
@@ -158,9 +159,23 @@ public class CalculateBMI extends Activity {
 
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.activity_start_screen, menu);
-		return true;
+	private void setContentBasedOnLayout()
+	{
+	    WindowManager winMan = (WindowManager)getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+	    
+	    if (winMan != null)
+	    {
+	        int orientation = winMan.getDefaultDisplay().getOrientation();
+	        
+	        if (orientation == 0) {
+	            // Portrait
+	            setContentView(R.layout.calculate_bmi_screen);
+	        }
+	        else if (orientation == 1) {
+	            // Landscape
+	            setContentView(R.layout.land_calculate_bmi_screen);
+	        }            
+	    }
 	}
+
 }
